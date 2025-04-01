@@ -1,3 +1,9 @@
-# age = input('How old you')
-# name = input('What is your name')
-# print(f"Hello my {name} and my age is {age}")
+car = ['Skoda','Mercedes','Lada','Reno','Hyundai','Tesla']
+print(len(car))
+for i in range(len(car)):
+    print(car[i])
+car.append(input("Enter next car "))
+car.remove('Skoda')
+car.sort()
+car.reverse()
+print(car)

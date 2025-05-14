@@ -1,3 +1,5 @@
+import time
+
 def atack(player1=str,player2=str):
     global characters
     if characters['player1']['shield'] > 0:
@@ -20,15 +22,24 @@ def superpower(player):
 
 characters = {'player1':{'hp':100,'damage':20,'superpower':'heal','shield':2},'player2':{'hp':120,'damage':15,'superpower':'extra_damage','shield':1}}
 
+def main():
+    print_hp()
+    time.sleep(1)
+    atack('player1','player2')
+    time.sleep(1)
+    atack('player1','player2')
+    time.sleep(1)
+    atack('player1','player2')
+    time.sleep(1)
+    print_hp()
+    superpower('player1')
+    time.sleep(1)
+    print_hp()
+    time.sleep(1)
+    superpower('player2')
+    time.sleep(1)
+    atack('player1','player2')
+    time.sleep(1)
+    print_hp()
 
-print_hp()
-atack('player1','player2')
-
-atack('player1','player2')
-atack('player1','player2')
-print_hp()
-superpower('player1')
-print_hp()
-superpower('player2')
-atack('player1','player2')
-print_hp()
+main()
